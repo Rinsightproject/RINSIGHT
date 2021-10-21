@@ -1,0 +1,14 @@
+[package]
+name = "rust-project"
+version = "0.0.1"
+authors = ["nobody"]
+edition = "2018"
+
+[dependencies]
+pad = "0.1.6"
+walkdir = "2"
+prettytable-rs = "^0.8"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.0"
+# json = "0.12.4"
+regex = "1"

@@ -1,0 +1,69 @@
+# format
+# category name
+# numbers of projects
+# follows n url lines 
+# should ignore empty lines and comments
+
+database_data
+4
+https://github.com/tikv/tikv.git
+https://github.com/indradb/indradb.git
+https://github.com/MaterializeInc/materialize.git
+https://github.com/mit-pdos/noria.git
+
+os_data
+3
+https://github.com/redox-os/kernel.git
+https://github.com/tock/tock.git
+https://github.com/nebulet/nebulet.git
+
+gaming_data
+4
+https://github.com/cristicbz/rust-doom.git
+https://github.com/citybound/citybound.git
+https://github.com/veloren/veloren.git
+https://github.com/ozkriff/zemeroth.git
+
+image_processing_data
+3
+https://github.com/RazrFalcon/resvg.git
+https://github.com/ivanceras/svgbob.git
+https://github.com/RazrFalcon/svgcleaner.git
+
+cryptocurrencies_data
+5
+https://github.com/mimblewimble/grin.git
+https://github.com/diem/diem.git
+https://github.com/paritytech/polkadot.git
+https://github.com/paritytech/substrate.git
+https://github.com/zcash/zcash.git
+
+security_tools_data
+4
+https://github.com/RustScan/RustScan.git
+https://github.com/kpcyrd/sniffglue.git
+https://github.com/epi052/feroxbuster.git
+https://github.com/kpcyrd/sn0int.git
+
+system_tool_data
+7#!/bin/bash
+#必选参数 第一个参数是要扫描的种类的文件夹path 例如 ../downloads/db
+#可选参数 如果加上 --skip 则跳过上次扫描部分
+#可选参数 如果指定 --debug 则使用debug版本扫描
+# 如 scan-one.sh ../../../downloads/database_data  --debug
+
+https://github.com/imsnif/bandwhich.git
+https://github.com/bootandy/dust.git
+https://github.com/jhspetersson/fselect.git
+https://github.com/extrawurst/gitui.git
+https://github.com/Peltoche/lsd.git
+https://github.com/ogham/exa.git
+
+web_data
+6
+https://github.com/getzola/zola.git
+https://github.com/denoland/deno.git
+https://github.com/servo/servo.git
+https://github.com/actix/actix-web.git
+https://github.com/hyperium/hyper.git
+https://github.com/SergioBenitez/Rocket.git
