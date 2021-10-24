@@ -1,8 +1,8 @@
 # RINSIGHT
 
 ## Introduction
-RINSIGHT is a prototype tool to analyzing how Rust’s language features used in real-world Rust projects.
-In our expriment, it was used on 36 open source Rust projects, from 8 domains, with a total 5,108,432 lines of Rust source code.
+RINSIGHT is a prototype tool to analyze how Rust’s language features used in real-world Rust projects.
+In our expriment, it has been used on 36 open source Rust projects, from 8 domains, with a total 5,108,432 lines of Rust source code.
 
 ## Dependencies
 
@@ -18,14 +18,14 @@ $ rustup default nightly
 $ rustup component add rustc-dev llvm-tools-preview
 ```
 
-## Run examples
+## Examples
 
-run the tikv test.
+Run the tikv test.
 ```
 $ cargo run ~/tikv
 ```
 
-run the tikv test and get json.
+Run the tikv test and get json.
 ```
 $ cargo run ~/tikv -j
 ``` 
