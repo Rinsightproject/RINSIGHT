@@ -1,179 +1,129 @@
-# rust-up-to-you
+# RINSIGHT
 
-### Environment
-Linux （Centos 7 通过）
-> curl https://sh.rustup.rs -sSf | sh
-> 
-> default...
->
->source $HOME/.cargo/env
->
->rustup install nightly 
->
->rustup default nightly
->
->rustup component add rustc-dev llvm-tools-preview
+## Introduction
+RINSIGHT is a prototype tool to analyzing how Rust’s language features used in real-world Rust projects.
+In our expriment, it was used on 36 open source Rust projects, from 8 domains, with a total 5,108,432 lines of Rust source code.
 
-### 运行
-> cargo run ~/tikv
+## Dependencies
 
-you can get json by run
-> cargo run ~/tikv -j
+### Operating system
+Linux （Centos 7）
 
-run and analyze
+### Rust toolchain installation
+```
+$ curl https://sh.rustup.rs -sSf | sh
+$ source $HOME/.cargo/env
+$ rustup install nightly
+$ rustup default nightly
+$ rustup component add rustc-dev llvm-tools-preview
+```
 
-or configure scripts/config
+## Run examples
 
-./scripts/shell/download-all.sh
+run the tikv test.
+```
+$ cargo run ~/tikv
+```
 
-scripts usage: ./scripts/README.md  
+run the tikv test and get json.
+```
+$ cargo run ~/tikv -j
+``` 
 
 
-## Rust Projects (8 domians 36 projects)
+## Test Rust Projects (8 domians 36 projects)
 ### Database: 4
-#### tikv
-A distributed KV database in Rust    
-https://github.com/tikv/tikv  
-#### indradb
+1. [tikv](https://github.com/tikv/tikv):
+A distributed KV database in Rust  
+2. [indradb](https://github.com/indradb/indradb.git):
 Rust based graph database  
-https://github.com/indradb/indradb.git   
-#### Materialize
+3. [Materialize](https://github.com/MaterializeInc/materialize):
 Streaming SQL database powered by Timely Dataflow   
-https://github.com/MaterializeInc/materialize    
-#### Noria
+4. [Noria](https://github.com/mit-pdos/noria):
 Dynamically changing, partially-stateful data-flow for web application backends.   
-https://github.com/mit-pdos/noria  
 
 
 ### Operating System: 3
-#### redox-os
+1. [redox-os](https://github.com/redox-os/kernel):
 Redox is an operating system written in Rust, a language with focus on safety and high performance.    
-https://github.com/redox-os/kernel  
-#### tock-os
+2. [tock-os](https://github.com/tock/tock):
 A secure embedded operating system for Cortex-M based microcontrollers.   
-https://github.com/tock/tock
-#### nebulet
+3. [nebulet](https://github.com/nebulet/nebulet):
 A microkernel that implements a WebAssembly "usermode" that runs in Ring 0.   
-https://github.com/nebulet/nebulet  
+  
 
 
 ### Gaming: 4
-#### rust-doom 
+1. [rust-doom](https://github.com/cristicbz/rust-doom): 
 A renderer for Doom, may progress to being a playable game.   
-https://github.com/cristicbz/rust-doom  
-
-#### citybound
+2. [citybound](https://github.com/citybound/citybound):
 Citybound is a city building game with a focus on realism, collaborative planning and simulation of microscopic details.    
-https://github.com/citybound/citybound  
-
-#### Veloren
+3. [Veloren](https://github.com/veloren/veloren):
 Veloren is a multiplayer voxel RPG written in Rust.   
-https://github.com/veloren/veloren  
-
-#### Zemeroth
+4. [Zemeroth](https://github.com/ozkriff/zemeroth):
 Zemeroth is a turn-based hexagonal tactical game written in Rust.  
-https://github.com/ozkriff/zemeroth   
+   
 
 ### Image Processing: 3
-#### resvg
+1. [resvg](https://github.com/RazrFalcon/resvg):
 An SVG rendering library.  
-https://github.com/RazrFalcon/resvg  
-
-#### svgbob
+2. [svgbob](https://github.com/ivanceras/svgbob):
 converts ASCII diagrams into SVG graphics  
-https://github.com/ivanceras/svgbob  
-
-#### svgcleaner
+3. [svgcleaner](https://github.com/RazrFalcon/svgcleaner):
 tidies SVG graphics  
-https://github.com/RazrFalcon/svgcleaner  
+  
 
 ### Cryptocurrencies: 5
-#### Grin
+1. [Grin](https://github.com/mimblewimble/grin/):
 Evolution of the MimbleWimble protocol.   
-https://github.com/mimblewimble/grin/  
-
-#### diem
+2. [diem](https://github.com/diem/diem):
 Diem’s mission is to enable a simple global currency and financial infrastructure that empowers billions of people.  
-https://github.com/diem/diem  
-
-#### polkadot
+3. [polkadot](https://github.com/paritytech/polkadot):
 Heterogeneous multi‑chain technology with pooled security  
-https://github.com/paritytech/polkadot  
-
-#### substrate
+4. [substrate](https://github.com/paritytech/substrate):
 Generic modular blockchain template written in Rust  
-https://github.com/paritytech/substrate  
-
-#### zcash
+5. [zcash](https://github.com/zcash/zcash):
 Zcash is an implementation of the "Zerocash" protocol  
-https://github.com/zcash/zcash  
-
+  
 ### Security tools: 4
-#### RustScan
+1. [RustScan](https://github.com/RustScan/RustScan):
 Make Nmap faster with this port scanning tool  
-https://github.com/RustScan/RustScan  
-
-#### sniffglue
+2. [sniffglue](https://github.com/kpcyrd/sniffglue):
 A secure multithreaded packet sniffer  
-https://github.com/kpcyrd/sniffglue  
-
-#### feroxbuster
+3. [feroxbuster](https://github.com/epi052/feroxbuster):
 A simple, fast, recursive content discovery tool written in Rust  
-https://github.com/epi052/feroxbuster  
-
-#### sn0int
+4. [sn0int](https://github.com/kpcyrd/sn0int):
 A semi-automatic OSINT framework and package manager  
-https://github.com/kpcyrd/sn0int  
-
+  
 ### System Tools: 7
-#### zoxide
+1. [zoxide](https://github.com/ajeetdsouza/zoxide):
 A fast alternative to cd that learns your habits  
-https://github.com/ajeetdsouza/zoxide  
-
-#### bandwhich
+2. [bandwhich](https://github.com/imsnif/bandwhich):
 Terminal bandwidth utilization tool  
-https://github.com/imsnif/bandwhich  
-
-#### dust
+3. [dust](https://github.com/bootandy/dust):
 A more intuitive version of du  
-https://github.com/bootandy/dust  
-
-#### fselect
+4. [fselect](https://github.com/jhspetersson/fselect):
 Find files with SQL-like queries  
-https://github.com/jhspetersson/fselect  
-
-#### gitui
+5. [gitui](https://github.com/extrawurst/gitui):
 Blazing fast terminal client for git written in Rust.  
-https://github.com/extrawurst/gitui  
-
-#### lsd
+6. [lsd](https://github.com/Peltoche/lsd):
 An ls with a lot of pretty colors and awesome icons  
-https://github.com/Peltoche/lsd  
-
-#### exa
+7. [exa](https://github.com/ogham/exa):
 A replacement for 'ls'  
-https://github.com/ogham/exa  
-
 
 ### Web: 6
-#### zola
+1. [zola](https://github.com/getzola/zola ):
 A fast static site generator in a single binary with everything built-in.  
-https://github.com/getzola/zola  
-#### deno
+2. [deno](https://github.com/denoland/deno):
 A secure JavaScript/TypeScript runtime built with V8, Rust, and Tokio  
-https://github.com/denoland/deno  
-#### servo
+3. [servo](https://github.com/servo/servo):
 A prototype web browser engine  
-https://github.com/servo/servo  
-#### actix-web
+4. [actix-web](https://github.com/actix/actix-web):
 Actix Web is a powerful, pragmatic, and extremely fast web framework for Rust  
-https://github.com/actix/actix-web  
-#### hyper
+5. [hyper](https://github.com/hyperium/hyper):
 A fast and correct HTTP implementation for Rust.  
-https://github.com/hyperium/hyper  
-  
-#### Rocket
+6. [Rocket](https://github.com/SergioBenitez/Rocket):
 Rocket is an async web framework for Rust with a focus on usability, security, extensibility, and speed.  
-https://github.com/SergioBenitez/Rocket  
+  
 
 
